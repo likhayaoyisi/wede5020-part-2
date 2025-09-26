@@ -1,10 +1,11 @@
-/* General Reset */
+/* Reset */
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
+/* Global */
 body {
 font-family: 'Roboto', sans-serif;
 line-height: 1.6;
@@ -14,8 +15,8 @@ color: #333;
 
 /* Header */
 header {
-background: #00695c;
-color: white;
+background: #005f99;
+color: #fff;
 padding: 20px;
 text-align: center;
 }
@@ -28,21 +29,22 @@ nav ul {
 list-style: none;
 display: flex;
 justify-content: center;
-gap: 20px;
+gap: 25px;
 }
 
 nav a {
 text-decoration: none;
 color: white;
 font-weight: bold;
+transition: color 0.3s;
 }
 
 nav a.active,
 nav a:hover {
-color: #ffb74d;
+color: #ff9800;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
 position: relative;
 text-align: center;
@@ -51,6 +53,7 @@ text-align: center;
 .hero img {
 width: 100%;
 height: auto;
+display: block;
 }
 
 .hero-text {
@@ -58,97 +61,88 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-color: white;
+color: #fff;
 background: rgba(0, 0, 0, 0.5);
-padding: 20px;
+padding: 25px;
 border-radius: 8px;
 }
 
 .btn {
 display: inline-block;
-padding: 10px 20px;
-background: #ffb74d;
-color: white;
+padding: 12px 24px;
+background: #ff9800;
+color: #fff;
 text-decoration: none;
-border-radius: 5px;
-margin-top: 10px;
+border-radius: 6px;
+margin-top: 15px;
+transition: background 0.3s;
 }
 
 .btn:hover {
-background: #ff9800;
+background: #e68900;
 }
 
 /* Content Sections */
-.content,
-.intro {
-padding: 30px;
+.content {
+padding: 40px 20px;
 text-align: center;
 }
 
 .content img {
 width: 100%;
-max-width: 600px;
+max-width: 650px;
 margin: 20px auto;
 display: block;
-border-radius: 8px;
+border-radius: 10px;
 }
 
-.service {
-margin: 20px 0;
+/* Services Grid */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
 }
 
 .service img {
 width: 100%;
-max-width: 400px;
-border-radius: 8px;
+border-radius: 10px;
+margin-bottom: 15px;
 }
 
 /* Form */
 form {
 display: flex;
 flex-direction: column;
-gap: 10px;
-margin-top: 20px;
+gap: 12px;
 max-width: 500px;
-margin-left: auto;
-margin-right: auto;
+margin: 25px auto;
 }
 
 form input,
 form textarea,
 form button {
-padding: 10px;
+padding: 12px;
 border: 1px solid #ccc;
-border-radius: 5px;
+border-radius: 6px;
+font-size: 1rem;
 }
 
 form button {
-background: #00695c;
+background: #005f99;
 color: white;
 cursor: pointer;
+transition: background 0.3s;
 }
 
 form button:hover {
-background: #004d40;
+background: #004a78;
 }
 
 /* Footer */
 footer {
 text-align: center;
-background: #00695c;
+background: #005f99;
 color: white;
-padding: 15px;
-margin-top: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-nav ul {
-flex-direction: column;
-gap: 10px;
-}
-
-.hero-text {
-width: 90%;
-}
+padding: 20px;
+margin-top: 30px;
 }
